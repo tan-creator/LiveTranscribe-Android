@@ -219,6 +219,8 @@ dependencies {
 
     // On-device translation (Google Translate models cached offline).
     implementation("com.google.mlkit:translate:17.0.3")
+    // Japanese tokenizer + IPA dictionary for furigana in the overlay
+    implementation("com.atilika.kuromoji:kuromoji-ipadic:0.9.0")
 
     // Firebase BoM pins compatible versions of every Firebase SDK below.
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))

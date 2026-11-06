@@ -259,7 +259,7 @@ class OverlayController(
         if (display.showOriginal) {
             originalText?.setTextColor(Color.argb(190, textR, textG, textB))
             originalText?.typeface = Typeface.create(font.typeface, Typeface.ITALIC)
-            originalText?.text = display.originalText
+            originalText?.text = Furigana.annotate(display.originalText)
             originalText?.textSize = display.originalTextSizeSp
             dividerView?.setBackgroundColor(Color.argb(45, textR, textG, textB))
             originalContainer?.visibility = if (ui.minimized) View.GONE else View.VISIBLE
@@ -269,7 +269,7 @@ class OverlayController(
 
         translatedText?.setTextColor(theme.textRgb)
         translatedText?.typeface = font.typeface
-        translatedText?.text = display.translatedText
+        translatedText?.text = Furigana.annotate(display.translatedText)
         translatedText?.textSize = display.translatedTextSizeSp
         translatedText?.visibility = View.VISIBLE
         body?.visibility = if (ui.minimized) View.GONE else View.VISIBLE
