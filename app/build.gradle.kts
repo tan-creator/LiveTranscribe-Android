@@ -184,6 +184,8 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            // kuromoji-core and kuromoji-ipadic both ship these
+            excludes += "/META-INF/{CONTRIBUTORS,LICENSE,README}.md"
         }
         jniLibs {
             useLegacyPackaging = false
